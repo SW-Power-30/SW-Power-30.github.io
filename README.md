@@ -84,12 +84,6 @@
         }
 
         loadClue();
-         <h1>Clue to Stop 2</h1>
-    <p id="Clue to Stop 2">This is a placeholder for clue 2</p>
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <button onclick="checkAnswer()">Submit</button>
-    <p id="feedback"></p>
-    <button id="nextButton" onclick="nextClue()" style="display:none;">Next Clue</button>
     </script>
 </body>
 </html>
