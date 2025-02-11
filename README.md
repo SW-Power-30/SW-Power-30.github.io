@@ -24,8 +24,8 @@
     </style>
 </head>
 <body>
-    <h1>Clue Solver</h1>
-    <p id="Clue to Stop 1">Loading clue...</p>
+    <h1>Clue to Stop 1</h1>
+    <p id="Clue to Stop 1">Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
