@@ -20,7 +20,6 @@
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +31,7 @@
     </style>
 </head>
 <body>
-    <h2>Answer the Question</h2>
+    <h2>Solve the clue to find the next stop</h2>
     <p id="question">Loading...</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
@@ -40,9 +39,9 @@
 
     <script>
         const questions = [
-            { question: "What has to be broken before you can use it?", answer: "egg" },
-            { question: "The more you take, the more you leave behind. What am I?", answer: "footsteps" },
-            { question: "I have keys but open no locks. What am I?", answer: "keyboard" }
+            { question: "Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time?", answer: "farmer markets" },
+            { question: "Near towering trees where wildlife roams, A hidden gem feels just like home. With a European touch and a scent so sweet,Find this spot for the perfect treat!", answer: "euro patisserie" },
+            { question: "Nestled where the grapevines grow, A cottage waits with a golden glow. In Lovedale’s heart, both quaint and great, Find the wines—don’t be late!", answer: "emmas cottage" }
         ];
 
         let currentQuestionIndex = 0;
@@ -58,7 +57,7 @@
                 answerInput.value = "";
                 answerInput.disabled = false;
             } else {
-                questionElement.textContent = "🎉 Congratulations! You answered all questions!";
+                questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
             }
         }
