@@ -33,7 +33,7 @@
 
     <script>
         const clues = [
-            { question: "Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!", answer: "keyboard", formal: "A Keyboard" },
+            { question: "Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!", answer: "Farmers Markets", formal: "Newcastle Farmer Markets" },
             { question: "The more you take, the more you leave behind. What am I?", answer: "footsteps", formal: "Footsteps" },
             { question: "What has to be broken before you can use it?", answer: "egg", formal: "An Egg" }
         ];
