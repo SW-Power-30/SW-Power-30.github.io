@@ -35,13 +35,13 @@
 </head>
 <body>
     <h2>Answer the Question</h2>
-    <p id="question">What has to be broken before you can use it?</p>
+    <p id="question">Im hot and hard to put out?</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
 
     <script>
-        const correctAnswer = "egg"; // Define the correct answer
+        const correctAnswer = "fire"; // Define the correct answer
         let attemptsLeft = 5; // Maximum attempts
 
         function checkAnswer() {
