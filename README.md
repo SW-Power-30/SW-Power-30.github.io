@@ -27,14 +27,14 @@
     <p id="result"></p>
 
     <script>
-        const correctAnswer = "Newcastle Farmer Markets"; // Predefined correct answer
+        const correctAnswer = "egg"; // Predefined correct answer
 
         function checkAnswer() {
             const userInput = document.getElementById("userAnswer").value.trim().toLowerCase();
             const resultElement = document.getElementById("result");
 
             if (userInput === correctAnswer) {
-                resultElement.textContent = "Correct! The answer is 'Newcastle Farmer Markets'. 🎉";
+                resultElement.textContent = "Correct! The answer is 'Egg'. 🎉";
                 resultElement.style.color = "green";
             } else {
                 resultElement.textContent = "Incorrect! Try again. ❌";
