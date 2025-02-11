@@ -22,8 +22,7 @@
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
 
-    
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +42,7 @@
 
     <script>
         const correctAnswer = "egg"; // Define the correct answer
-        let attemptsLeft = 3; // Maximum attempts
+        let attemptsLeft = 5; // Maximum attempts
 
         function checkAnswer() {
             const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
