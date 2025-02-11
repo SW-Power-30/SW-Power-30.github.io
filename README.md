@@ -41,7 +41,7 @@
     <p id="feedback"></p>
 
     <script>
-        const correctAnswer = "farmer market"; // Define the correct answer
+        const correctAnswer = "farmer markets"; // Define the correct answer
         let attemptsLeft = 5; // Maximum attempts
 
         function checkAnswer() {
@@ -49,7 +49,7 @@
             const feedbackElement = document.getElementById("feedback");
 
             if (userAnswer === correctAnswer) {
-                feedbackElement.textContent = "Correct! The answer is 'Egg'. 🎉";
+                feedbackElement.textContent = "Correct! The answer is 'Newcastle Farmer Markets'. 🎉";
                 feedbackElement.style.color = "green";
             } else {
                 attemptsLeft--;
