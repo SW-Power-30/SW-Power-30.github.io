@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <h1>Clue Solver</h1>
+    <h1>Mystery Picnic</h1>
     <p id="clue">"Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!" .</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
