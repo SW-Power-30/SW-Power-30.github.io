@@ -21,17 +21,28 @@
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
+
     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question with Attempts</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        #feedback { font-weight: bold; margin-top: 10px; }
+    </style>
 </head>
 <body>
-    <h2>Clue to find Stop 1</h2>
-    <p id="question">Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!</p>
+    <h2>Answer the Question</h2>
+    <p id="question">What has to be broken before you can use it?</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
 
     <script>
-        const correctAnswer = "Farmer Markets"; // Define the correct answer
+        const correctAnswer = "egg"; // Define the correct answer
         let attemptsLeft = 3; // Maximum attempts
 
         function checkAnswer() {
@@ -39,7 +50,7 @@
             const feedbackElement = document.getElementById("feedback");
 
             if (userAnswer === correctAnswer) {
-                feedbackElement.textContent = "Correct! The answer is 'Newcastle Farmer Markets'. 🎉";
+                feedbackElement.textContent = "Correct! The answer is 'Egg'. 🎉";
                 feedbackElement.style.color = "green";
             } else {
                 attemptsLeft--;
