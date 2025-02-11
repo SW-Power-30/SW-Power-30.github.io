@@ -17,48 +17,36 @@
     <p id="feedback"></p>
     <button id="nextButton" onclick="nextClue()" style="display:none;">Next Clue</button>
 
-    <script>
-        const clues = [
-            { question: "I have keys but open no locks. What am I?", answer: "keyboard", formal: "A Keyboard" },
-            { question: "The more you take, the more you leave behind. What am I?", answer: "footsteps", formal: "Footsteps" },
-            { question: "What has to be broken before you can use it?", answer: "egg", formal: "An Egg" }
-        ];
-        
-        let currentClueIndex = 0;
-        const clueElement = document.getElementById("clue");
-        const feedbackElement = document.getElementById("feedback");
-        const answerInput = document.getElementById("answer");
-        const nextButton = document.getElementById("nextButton");
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Checker</title>
+</head>
+<body>
+    <h2>Clue to Stop 1:</h2>
+    <p>"Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!"</p>
+    <input type="text" id="userAnswer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
 
-        function loadClue() {
-            clueElement.textContent = clues[currentClueIndex].question;
-            feedbackElement.textContent = "";
-            answerInput.value = "";
-            nextButton.style.display = "none";
-        }
+    <script>
+        const correctAnswer = "Newcastle Farmer Markets"; // Predefined correct answer
 
         function checkAnswer() {
-            const userAnswer = answerInput.value.trim().toLowerCase();
-            if (userAnswer === clues[currentClueIndex].answer) {
-                feedbackElement.textContent = "Correct! " + clues[currentClueIndex].formal;
-                nextButton.style.display = "inline";
+            const userInput = document.getElementById("userAnswer").value.trim().toLowerCase();
+            const resultElement = document.getElementById("result");
+
+            if (userInput === correctAnswer) {
+                resultElement.textContent = "Correct! The answer is 'Newcastle Farmer Markets'. 🎉";
+                resultElement.style.color = "green";
             } else {
-                feedbackElement.textContent = "Try again!";
+                resultElement.textContent = "Incorrect! Try again. ❌";
+                resultElement.style.color = "red";
             }
         }
-
-        function nextClue() {
-            if (currentClueIndex < clues.length - 1) {
-                currentClueIndex++;
-                loadClue();
-            } else {
-                clueElement.textContent = "Congratulations! You've solved all the clues!";
-                answerInput.style.display = "none";
-                nextButton.style.display = "none";
-            }
-        }
-
-        loadClue();
     </script>
 </body>
 </html>
+
