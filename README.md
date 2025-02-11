@@ -35,13 +35,13 @@
 </head>
 <body>
     <h2>Answer the Question</h2>
-    <p id="question">Im hot and hard to put out?</p>
+    <p id="question">Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time!</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
 
     <script>
-        const correctAnswer = "fire"; // Define the correct answer
+        const correctAnswer = "farmer market"; // Define the correct answer
         let attemptsLeft = 5; // Maximum attempts
 
         function checkAnswer() {
