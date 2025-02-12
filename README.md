@@ -78,7 +78,7 @@
             const correctImage = questions[currentQuestionIndex].image;
 
             if (userAnswer === correctAnswer) {
-                feedbackElement.textContent = "✅ Correct! Moving to next question...";
+                feedbackElement.textContent = "✅ Correct! Collect your goodies from the venue, then click next....";
                 feedbackElement.style.color = "green";
                 answerImage.src = correctImage; // Set image source
                 answerImage.style.display = "block"; // Show image
