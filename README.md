@@ -19,6 +19,7 @@
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
+    <img src="[https://example.com/logo.png](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzKNUyatnYbcfiPq3JSCtrO4_RsA34II7IA&s)" alt="Header Image" width="200">
 
 <html lang="en">
 <head>
@@ -29,7 +30,6 @@
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
-    <img src="[https://example.com/logo.png](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzKNUyatnYbcfiPq3JSCtrO4_RsA34II7IA&s)" alt="Header Image" width="200">
 </head>
 <body>
     <h2>Solve the clue to find the next stop</h2>
