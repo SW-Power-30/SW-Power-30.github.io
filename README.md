@@ -36,15 +36,16 @@
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
+    <img id="answerImage" src="" alt="Correct Answer Image">
 
     <script>
         const questions = [
-            { question: "Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time?", answer: "farmer markets" },
-            { question: "Near towering trees where wildlife roams, A hidden gem feels just like home. With a European touch and a scent so sweet,Find this spot for the perfect treat!", answer: "euro patisserie" },
-            { question: "Nestled where the grapevines grow, A cottage waits with a golden glow. In Lovedale’s heart, both quaint and great, Find the wines—don’t be late!", answer: "emmas cottage" },
-            { question: "Near bubbles that sparkle, yet not in a glass, A sweet little haven, too tempting to pass. Find this stop near famous white wine.", answer: "hunter valley chocolate company" },
-            { question: "Where flavors are bold and aromas are grand, You'll find creamy delights in a well-known land. On a road that's 'not fixed' yet leads the right way", answer: "smelly cheese shop" },
-            { question: "Not far from shops and cellar doors, A place for play and open floors. Pack your basket, take a seat, if you can find your spot?", answer: "hunter valley gardens" }
+            { question: "Where the earth’s bounty meets eager hands, near a place where animals once took their stands. On Sundays, the flavours are rich, the produce is prime—find this spot, and you’ll feast in no time?", answer: "farmer markets", image: "https://example.com/egg.jpg"  },
+            { question: "Near towering trees where wildlife roams, A hidden gem feels just like home. With a European touch and a scent so sweet,Find this spot for the perfect treat!", answer: "euro patisserie", image: "https://example.com/egg.jpg"   },
+            { question: "Nestled where the grapevines grow, A cottage waits with a golden glow. In Lovedale’s heart, both quaint and great, Find the wines—don’t be late!", answer: "emmas cottage", image: "https://example.com/egg.jpg"   },
+            { question: "Near bubbles that sparkle, yet not in a glass, A sweet little haven, too tempting to pass. Find this stop near famous white wine.", answer: "hunter valley chocolate company", image: "https://example.com/egg.jpg"   },
+            { question: "Where flavors are bold and aromas are grand, You'll find creamy delights in a well-known land. On a road that's 'not fixed' yet leads the right way", answer: "smelly cheese shop", image: "https://example.com/egg.jpg"   },
+            { question: "Not far from shops and cellar doors, A place for play and open floors. Pack your basket, take a seat, if you can find your spot?", answer: "hunter valley gardens", image: "https://example.com/egg.jpg"   }
         ];
 
         let currentQuestionIndex = 0;
