@@ -37,6 +37,7 @@
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
     <img id="answerImage" src="" alt="Correct Answer Image">
+    <button id="nextButton" onclick="nextQuestion()">Next Question</button>
 
     <script>
         const questions = [
@@ -54,6 +55,7 @@
         const feedbackElement = document.getElementById("feedback");
         const answerInput = document.getElementById("answer");
         const answerImage = document.getElementById("answerImage");
+        const nextButton = document.getElementById("nextButton");
 
         function loadQuestion() {
             if (currentQuestionIndex < questions.length) {
@@ -61,10 +63,12 @@
                 feedbackElement.textContent = `Attempts left: ${attemptsLeft}`;
                 answerInput.value = "";
                 answerInput.disabled = false;
-                answerImage.style.display = "none"; // Hide previous image
+                answerImage.style.display = "none";
+                nextButton.style.display = "none";
             } else {
                 questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
+                nextButton.style.display = "none";
             }
         }
 
@@ -78,11 +82,8 @@
                 feedbackElement.style.color = "green";
                 answerImage.src = correctImage; // Set image source
                 answerImage.style.display = "block"; // Show image
-                setTimeout(() => {
-                    currentQuestionIndex++;
-                    attemptsLeft = 3; // Reset attempts for next question
-                    loadQuestion();
-                }, 10000); // Delay before next question
+                answerInput.disabled = true;
+                nextButton.style.display = "block";
             } else {
                 attemptsLeft--;
                 if (attemptsLeft > 0) {
@@ -93,13 +94,16 @@
                     feedbackElement.style.color = "blue";
                     answerImage.src = correctImage; // Show image even if wrong after 3 attempts
                     answerImage.style.display = "block";
-                    setTimeout(() => {
-                        currentQuestionIndex++;
-                        attemptsLeft = 3; // Reset attempts
-                        loadQuestion();
-                    }, 3000); // Delay before moving to next question
+                    answerInput.disabled = true;
+                    nextButton.style.display = "block";
                 }
             }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            attemptsLeft = 3;
+            loadQuestion();
         }
 
         loadQuestion(); // Initialize first question
