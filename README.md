@@ -19,8 +19,9 @@
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
     </style>
+<head>
     <img src="[https://example.com/logo.png](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzKNUyatnYbcfiPq3JSCtrO4_RsA34II7IA&s)" alt="Header Image" width="200">
-
+<head>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
