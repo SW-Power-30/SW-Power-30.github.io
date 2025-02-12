@@ -82,7 +82,7 @@
                     currentQuestionIndex++;
                     attemptsLeft = 3; // Reset attempts for next question
                     loadQuestion();
-                }, 2000); // Delay before next question
+                }, 10000); // Delay before next question
             } else {
                 attemptsLeft--;
                 if (attemptsLeft > 0) {
