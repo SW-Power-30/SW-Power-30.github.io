@@ -53,6 +53,7 @@
         const questionElement = document.getElementById("question");
         const feedbackElement = document.getElementById("feedback");
         const answerInput = document.getElementById("answer");
+        const answerImage = document.getElementById("answerImage");
 
         function loadQuestion() {
             if (currentQuestionIndex < questions.length) {
@@ -60,6 +61,7 @@
                 feedbackElement.textContent = `Attempts left: ${attemptsLeft}`;
                 answerInput.value = "";
                 answerInput.disabled = false;
+                answerImage.style.display = "none"; // Hide previous image
             } else {
                 questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
@@ -69,15 +71,18 @@
         function checkAnswer() {
             const userAnswer = answerInput.value.trim().toLowerCase();
             const correctAnswer = questions[currentQuestionIndex].answer;
+            const correctImage = questions[currentQuestionIndex].image;
 
             if (userAnswer === correctAnswer) {
                 feedbackElement.textContent = "✅ Correct! Moving to next question...";
                 feedbackElement.style.color = "green";
+                answerImage.src = correctImage; // Set image source
+                answerImage.style.display = "block"; // Show image
                 setTimeout(() => {
                     currentQuestionIndex++;
                     attemptsLeft = 3; // Reset attempts for next question
                     loadQuestion();
-                }, 1000); // Delay before next question
+                }, 2000); // Delay before next question
             } else {
                 attemptsLeft--;
                 if (attemptsLeft > 0) {
@@ -86,11 +91,13 @@
                 } else {
                     feedbackElement.textContent = `❌ No attempts left! The correct answer was: "${correctAnswer}".`;
                     feedbackElement.style.color = "blue";
+                    answerImage.src = correctImage; // Show image even if wrong after 3 attempts
+                    answerImage.style.display = "block";
                     setTimeout(() => {
                         currentQuestionIndex++;
                         attemptsLeft = 3; // Reset attempts
                         loadQuestion();
-                    }, 2000); // Delay before moving to next question
+                    }, 3000); // Delay before moving to next question
                 }
             }
         }
