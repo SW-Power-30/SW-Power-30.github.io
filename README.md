@@ -79,7 +79,7 @@
 
         function checkAnswer() {
             const userAnswer = answerInput.value.trim().toLowerCase();
-            const correctAnswers = questions[currentQuestionIndex].answer;
+            const correctAnswers = questions[currentQuestionIndex].answers;
             const correctImage = questions[currentQuestionIndex].image;
             const correctMessage = questions[currentQuestionIndex].message;
 
