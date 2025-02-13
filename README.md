@@ -79,7 +79,7 @@
             const correctMessage = questions[currentQuestionIndex].message;
 
             if (userAnswer === correctAnswer) {
-                feedbackElement.textContent = `✅ ${correctMessage} Click 'Next Question' to continue.`;
+                feedbackElement.textContent = `✅ ${correctMessage} ......Click 'Next Question' to continue.`;
                 feedbackElement.style.color = "green";
                 answerImage.src = correctImage; // Set image source
                 answerImage.style.display = "block"; // Show image
