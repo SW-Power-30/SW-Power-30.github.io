@@ -33,6 +33,7 @@
     <p id="question">Loading...</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
+    <button id="hintButton" onclick="showHint()">Hint</button>
     <p id="feedback"></p>
     <p id="hint"></p>
     <img id="answerImage" src="" alt="Correct Answer Image">
