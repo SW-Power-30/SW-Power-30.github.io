@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,17 +19,6 @@
         <h1>Mystery Picnic</h1>
     </header>
     
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Step Questions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        #feedback { font-weight: bold; margin-top: 10px; }
-    </style>
-</head>
-<body>
     <h2>Solve the clue to find the next stop</h2>
     <p id="question">Loading...</p>
     <input type="text" id="answer" placeholder="Enter your answer">
@@ -38,6 +28,9 @@
     <p id="hint"></p>
     <img id="answerImage" src="" alt="Correct Answer Image">
     <button id="nextButton" onclick="nextQuestion()">Next Question</button>
+
+</body>
+</html>
 
     <script>
         const questions = [
