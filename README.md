@@ -38,18 +38,6 @@
     <p id="hint"></p>
     <img id="answerImage" src="" alt="Correct Answer Image">
     <button id="nextButton" onclick="nextQuestion()">Next Question</button>
-
-def main():
-    PASSWORD = "quiz123"  # Hardcoded password
-    
-    entered_password = input("Enter the quiz password: ")
-    while entered_password != PASSWORD:
-        print("Incorrect password. Try again.")
-        entered_password = input("Enter the quiz password: ")
-    
-    print("\nPassword correct! Starting the quiz...\n")
-
-
     
     <script>
         const questions = [
