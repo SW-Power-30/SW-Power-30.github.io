@@ -97,7 +97,7 @@
                     feedbackElement.textContent = `❌ Incorrect! Try again. Attempts left: ${attemptsLeft}`;
                     feedbackElement.style.color = "red";
                 } else {
-                    feedbackElement.textContent = `❌ No attempts left! The correct answer was: "${correctAnswer}".`;
+                    feedbackElement.textContent = `❌ No attempts left! The correct answer was: "${correctAnswers}".`;
                     feedbackElement.style.color = "blue";
                     answerImage.src = correctImage; // Show image even if wrong after 3 attempts
                     answerImage.style.display = "block";
