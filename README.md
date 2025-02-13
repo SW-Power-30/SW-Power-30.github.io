@@ -1,3 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: none;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .password-box {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-box">
+        <h2>Enter Password to Continue</h2>
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="content" style="display:none;">
+        <h1>Welcome to the Protected Content</h1>
+        <p>This is the content of the page that was hidden behind the password.</p>
+    </div>
+
+    <script>
+        const correctPassword = 'yourpassword'; // Change this to your desired password
+
+        function checkPassword() {
+            const userPassword = document.getElementById('password').value;
+
+            if (userPassword === correctPassword) {
+                document.body.style.display = 'block';
+                document.querySelector('.password-box').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
