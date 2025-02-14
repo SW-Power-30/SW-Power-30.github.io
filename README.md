@@ -63,7 +63,7 @@
         const questionsSection = document.getElementById("questionsSection");
         const passwordFeedback = document.getElementById("passwordFeedback");
 
-        const correctPassword = "your_password"; // Set your password here
+        const correctPassword = "happy birthday"; // Set your password here
 
         function validatePassword() {
             const enteredPassword = document.getElementById("password").value;
