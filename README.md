@@ -18,27 +18,27 @@
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8w_gKKNvN8aJs_j74P29gKhuOHdN0FXeavg&s" alt="Header Logo" width="500">
         <h1>Mystery Picnic</h1>
     </header>
+
+    <!-- Password Prompt -->
+    <div id="passwordPrompt">
+        <h2>Please enter the password to start:</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="validatePassword()">Submit</button>
+        <p id="passwordFeedback" style="color: red;"></p>
+    </div>
     
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Step Questions</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
-        #feedback { font-weight: bold; margin-top: 10px; }
-    </style>
-</head>
-<body>
-    <h2>Solve the clue to find the next stop</h2>
-    <p id="question">Loading...</p>
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <button onclick="checkAnswer()">Submit</button>
-    <button id="hintButton" onclick="showHint()">Hint</button>
-    <p id="feedback"></p>
-    <p id="hint"></p>
-    <img id="answerImage" src="" alt="Correct Answer Image">
-    <button id="nextButton" onclick="nextQuestion()">Next Question</button>
+    <!-- Questions Section -->
+    <div id="questionsSection" style="display: none;">
+        <h2>Solve the clue to find the next stop</h2>
+        <p id="question">Loading...</p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <button id="hintButton" onclick="showHint()">Hint</button>
+        <p id="feedback"></p>
+        <p id="hint"></p>
+        <img id="answerImage" src="" alt="Correct Answer Image">
+        <button id="nextButton" onclick="nextQuestion()">Next Question</button>
+    </div>
     
     <script>
         const questions = [
@@ -59,6 +59,22 @@
         const nextButton = document.getElementById("nextButton");
         const hintButton = document.getElementById("hintButton");
         const hintElement = document.getElementById("hint");
+        const passwordPrompt = document.getElementById("passwordPrompt");
+        const questionsSection = document.getElementById("questionsSection");
+        const passwordFeedback = document.getElementById("passwordFeedback");
+
+        const correctPassword = "your_password"; // Set your password here
+
+        function validatePassword() {
+            const enteredPassword = document.getElementById("password").value;
+            if (enteredPassword === correctPassword) {
+                passwordPrompt.style.display = "none";
+                questionsSection.style.display = "block";
+                loadQuestion();
+            } else {
+                passwordFeedback.textContent = "Incorrect password. Please try again.";
+            }
+        }
 
         function loadQuestion() {
             if (currentQuestionIndex < questions.length) {
@@ -119,7 +135,7 @@
             loadQuestion();
         }
 
-        loadQuestion(); // Initialize first question
+        // Do not call loadQuestion here; it will be called after password validation loadQuestion(); // Initialize first question
     </script>
 </body>
 </html>
