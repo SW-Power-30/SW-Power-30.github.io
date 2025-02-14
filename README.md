@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi-Step Questions with Hints</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        body { font-family: Arial, sans-serif; text-align: center; margin: 10px; }
         #feedback { font-weight: bold; margin-top: 10px; }
         #answerImage { display: none; width: 400px; margin-top: 10px; margin-left: auto; margin-right: auto; }
         #nextButton, #hintButton { display: none; margin-top: 10px; }
