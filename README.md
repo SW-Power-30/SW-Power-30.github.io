@@ -7,14 +7,14 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
-        #answerImage { display: none; width: 200px; margin-top: 10px; }
+        #answerImage { display: none; width: 200px; margin-top: 10px; margin-left: auto; margin-right: auto; }
         #nextButton, #hintButton { display: none; margin-top: 10px; }
         #hint { display: none; font-style: italic; color: gray; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <header style="text-align: center; padding: 20px; background-color: #ff33a8;">
+    <header style="text-align: center; padding: 20px; background-color: ##f5eef8;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8w_gKKNvN8aJs_j74P29gKhuOHdN0FXeavg&s" alt="Header Logo" width="500">
         <h1>Mystery Picnic</h1>
     </header>
