@@ -7,7 +7,7 @@
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
         #feedback { font-weight: bold; margin-top: 10px; }
-        #answerImage { display: none; width: 200px; margin-top: 10px; margin-left: auto; margin-right: auto; }
+        #answerImage { display: none; width: 400px; margin-top: 10px; margin-left: auto; margin-right: auto; }
         #nextButton, #hintButton { display: none; margin-top: 10px; }
         #hint { display: none; font-style: italic; color: gray; margin-top: 10px; }
     </style>
