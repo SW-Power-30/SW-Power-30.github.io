@@ -20,6 +20,10 @@
         <h1>Mystery Picnic</h1>
     </header>
 
+    <!-- Countdown clock -->
+    <div id="countdown"></div>
+        </div>
+
     <!-- Password Prompt -->
     <div id="passwordPrompt">
         <h2>Please enter the password to start:</h2>
@@ -27,11 +31,6 @@
         <button onclick="validatePassword()">Submit</button>
         <p id="passwordFeedback" style="color: red;"></p>
     </div>
-
-    <!-- Countdown clock -->
-    <div id="countdown"></div>
-        <button id="enter-button">Enter</button>
-        </div>
     
     <!-- Questions Section -->
     <div id="questionsSection" style="display: none;">
