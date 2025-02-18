@@ -10,6 +10,7 @@
         #answerImage { display: none; width: 300px; margin-top: 10px; margin-left: auto; margin-right: auto; }
         #nextButton, #hintButton { display: none; margin-top: 10px; }
         #hint { display: none; font-style: italic; color: gray; margin-top: 10px; }
+        #countdown { font-size: 2em; margin-bottom: 20px;}
     </style>
 </head>
 <body>
@@ -26,6 +27,11 @@
         <button onclick="validatePassword()">Submit</button>
         <p id="passwordFeedback" style="color: red;"></p>
     </div>
+
+    <!-- Countdown clock -->
+    <div id="countdown"></div>
+        <button id="enter-button">Enter</button>
+        </div>
     
     <!-- Questions Section -->
     <div id="questionsSection" style="display: none;">
@@ -73,6 +79,25 @@
                 loadQuestion();
             } else {
                 passwordFeedback.textContent = "Incorrect password. Please try again.";
+            }
+        }
+
+        function updateCountdown() {
+            const targetDate = new Date('2025-03-07T00:00:00Z');
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+                document.getElementById('countdown').innerHTML = 'The time has come!';
+                document.getElementById('enter-button').style.display = 'block';
+                clearInterval(countdownInterval);
+            } else {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
             }
         }
 
@@ -135,6 +160,9 @@
             loadQuestion();
         }
 
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
         // Do not call loadQuestion here; it will be called after password validation loadQuestion(); // Initialize first question
     </script>
 </body>
