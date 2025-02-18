@@ -17,15 +17,13 @@
 
     <header style="text-align: center; padding: 20px; background-color: #f5eef8;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8w_gKKNvN8aJs_j74P29gKhuOHdN0FXeavg&s" alt="Header Logo" width="500">
-        <h1>Mystery Picnic</h1>
+        <h1>Mystery Picnic 7th March</h1>
     </header>
 
     <!-- Countdown clock -->
-    <h2>Picnic will be on the 7th March 2025:</h2>
+    <h2>Picnic Countdown:</h2>
     <div id="countdown"></div>
     
-       
-
     <!-- Password Prompt -->
     <div id="passwordPrompt">
         <h3>Please enter the password to start:</h3>
@@ -112,6 +110,7 @@
                 nextButton.style.display = "none";
                 hintButton.style.display = "block";
                 hintElement.style.display = "none";
+                document.getElementById('countdown').style.display = 'block'; // Show the countdown
             } else {
                 questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
