@@ -82,12 +82,12 @@
         }
 
         function updateCountdown() {
-            const targetDate = new Date('2025-03-07T00:00:00Z');
+            const targetDate = new Date('2025-02-19T00:00:00Z');
             const now = new Date();
             const difference = targetDate - now;
 
             if (difference <= 0) {
-                document.getElementById('countdown').innerHTML = 'The time has come!';
+                document.getElementById('countdown').innerHTML = 'The time has come..Password "happy birthday!';
                 document.getElementById('enter-button').style.display = 'block';
                 clearInterval(countdownInterval);
             } else {
@@ -110,7 +110,6 @@
                 nextButton.style.display = "none";
                 hintButton.style.display = "block";
                 hintElement.style.display = "none";
-                document.getElementById('countdown').style.display = 'block'; // Show the countdown
             } else {
                 questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
