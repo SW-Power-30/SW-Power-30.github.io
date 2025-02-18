@@ -21,12 +21,14 @@
     </header>
 
     <!-- Countdown clock -->
+    <h2>Picnic will be on the 7th March 2025:</h2>
     <div id="countdown"></div>
-        </div>
+    
+       
 
     <!-- Password Prompt -->
     <div id="passwordPrompt">
-        <h2>Please enter the password to start:</h2>
+        <h3>Please enter the password to start:</h3>
         <input type="password" id="password" placeholder="Enter password">
         <button onclick="validatePassword()">Submit</button>
         <p id="passwordFeedback" style="color: red;"></p>
