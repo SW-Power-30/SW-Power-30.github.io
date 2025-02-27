@@ -115,6 +115,7 @@
                 answerInput.style.display = "none";
                 nextButton.style.display = "none";
                 hintButton.style.display = "none";
+                Submitbutton.style.display = "none";
             }
         }
 
