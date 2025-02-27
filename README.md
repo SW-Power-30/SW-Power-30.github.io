@@ -110,12 +110,13 @@
                 nextButton.style.display = "none";
                 hintButton.style.display = "block";
                 hintElement.style.display = "none";
+                submitButton.style.display = "block"; // Ensure submit button is shown for new questions
             } else {
                 questionElement.textContent = "🎉 Congratulations! You have solved all the clues and collected all the goodies, now enjoy the picnic!";
                 answerInput.style.display = "none";
                 nextButton.style.display = "none";
                 hintButton.style.display = "none";
-                Submitbutton.style.display = "none";
+                submitButton.style.display = "none"; // Hide submit button when all questions are answered
             }
         }
 
