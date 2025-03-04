@@ -82,7 +82,7 @@
         }
 
         function updateCountdown() {
-            const targetDate = new Date('2025-03-08T00:00:00Z');
+            const targetDate = new Date('2025-03-09T07:00:00Z');
             const now = new Date();
             const difference = targetDate - now;
 
