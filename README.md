@@ -21,7 +21,7 @@
     </header>
 
     <!-- Countdown clock -->
-    <h2>Picnic Countdown:</h2>
+    <h2>Picnic Countdown: When the time is right, enter the password to unlock clues and riddles. Solve them to gather your picnic food and discover your final destination!</h2>
     <div id="countdown"></div>
     
     <!-- Password Prompt -->
