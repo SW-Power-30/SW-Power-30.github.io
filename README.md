@@ -17,7 +17,7 @@
 
     <header style="text-align: center; padding: 20px; background-color: #f5eef8;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8w_gKKNvN8aJs_j74P29gKhuOHdN0FXeavg&s" alt="Header Logo" width="500">
-        <h1>Mystery Picnic 7th March</h1>
+        <h1>Mystery Picnic 9th March</h1>
     </header>
 
     <!-- Countdown clock -->
